@@ -1,6 +1,9 @@
 --Task 2
 -- 1.	Creation and selecting database as an active one:
--- CREATE DATABASE LIBRARY;
+-- One cannot create a database and switch to it in one query. Instead we use the GO command to send the CREATE DATABASE as a separate query first.
+CREATE DATABASE LIBRARY;
+GO
+
 -- It's not possible to use 'CREATE' and 'USE' in the same query; we assume that the base is already created
 USE LIBRARY;
 

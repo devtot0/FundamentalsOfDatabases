@@ -1,6 +1,7 @@
 --Define new database named test_yourname using CREATE DATABASE statement.
---One cannot create a database and switch to it in one query. We're assuming that the database is already created here.
---CREATE DATABASE test_f9;
+--One cannot create a database and switch to it in one query. Instead we use the GO command to send the CREATE DATABASE as a separate query first.
+CREATE DATABASE test_f9;
+GO
 
 --Check the name of the database you are connected to. You can change a current database using the statement: USE database_name
 USE test_f9;
