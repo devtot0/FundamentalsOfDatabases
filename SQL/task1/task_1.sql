@@ -37,7 +37,7 @@ CREATE TABLE MEMBERS (
 
 --Add foreign key on band_id column of MEMBERS table, which references BANDS table.
 ALTER TABLE MEMBERS ADD
-CONSTRAINT fk_members_bands FOREIGN KEY (band_id) REFERENCES BANDS(band_id)
+CONSTRAINT fk_members_bands FOREIGN KEY (band_id) REFERENCES BANDS(band_id);
 
 --Insert into that table 2 records for The Beatles band: John Lennon and Paul McCartney.
 DECLARE @band INT;

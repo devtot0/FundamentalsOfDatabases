@@ -3,12 +3,12 @@
 
 --2. Display names and salaries of employees.
 SELECT first_name, last_name, salary
-FROM employees
+FROM employees;
 
 --3. Display the last name and salary of employees earning more than $12,000.
 SELECT last_name, salary
 FROM employees
-WHERE salary>12000
+WHERE salary>12000;
  
 --4. Display the last name and department number for employee number 176.
 SELECT last_name, department_id
@@ -18,7 +18,7 @@ WHERE employee_id = 176;
 --5.	Display the last name and salary for all employees whose salary is not in the range of $5,000 to $12,000.
 SELECT last_name, salary
 FROM employees
-WHERE NOT(salary<=12000 AND salary>=5000)
+WHERE NOT(salary<=12000 AND salary>=5000);
  
 --6.	Display the last name, job ID, and start date (hire date) for the employees with the last names of Matos and Taylor. Order the query in ascending order by start date.
 SELECT last_name, job_id, hire_date
