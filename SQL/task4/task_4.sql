@@ -1,4 +1,5 @@
 --Task 4
+USE HR;
 --1.	Show last names and numbers of all managers together with the number of employees that are his / her subordinates.
 SELECT e2.last_name, e2.employee_id, COUNT(*)
 FROM employees e1 join employees e2
@@ -6,9 +7,8 @@ ON e1.manager_id = e2.employee_id
 GROUP BY e2.employee_id, e2.last_name
  
 --2.	Create a report that displays the department name, location name, job title and salary of those employees who work in a specific (given) location.
-SELECT d1.department_name, l1.location_id, e1.last_name, e1.job_id, e1.salary
-FROM employees e1 join (departments d1 join locations l1
-ON d1.location_id = l1.location_id)
+SELECT d1.department_name, d1.location_id, e1.last_name, e1.job_id, e1.salary
+FROM employees e1 join departments d1
 ON e1.department_id = d1.department_id
  
 --3.	Find the number of employees who have a last name that ends with the letter n.
