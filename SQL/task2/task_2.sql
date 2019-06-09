@@ -65,8 +65,8 @@ CREATE TABLE BOOK_LOANS (
 
 --Additional exercises
 --1.	Creation and selecting database as active one:
-
-CREATE DATABASE video_renting; 
+CREATE DATABASE video_renting;
+GO
 USE video_renting;
 
 --2.	Creation of Member table:

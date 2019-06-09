@@ -133,13 +133,10 @@ WHERE salary > (
 ORDER BY salary; 
 
 --5A.	Write a query that displays the employee number and last name of all employees who work in a department with any employee whose last name starts with "U".
-SELECT employee_id, last_name
-FROM employees
-WHERE department_id = (
-			 SELECT department_id
-			 FROM employees
-			 WHERE last_name LIKE 'U%'
-			 );
+SELECT DISTINCT e1.employee_id, e1.last_name
+FROM employees e1 JOIN employees e2
+ON e1.department_id = e2.department_id
+WHERE e2.last_name LIKE 'U%';
  
 --6A.	Create a report for HR that displays the last name and salary of every employee who reports to King.
 SELECT e1.last_name, e1.salary
